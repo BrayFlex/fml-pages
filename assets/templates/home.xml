@@ -14,7 +14,7 @@
             </BTN>
         </BOX>
         <PAD top="30" />
-        <BTN onclick="open('/assets/templates/nav.xml')" label="Next Page" color="lightblue" />
+        <BTN onclick="open('/assets/templates/nav.xml')" label="Next Page" color="amber" type="outlined" />
     </BOX>
 
 </FML>
