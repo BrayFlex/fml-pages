@@ -13,6 +13,8 @@
                 <ICON icon="send" color="{THEME.onprimary}" size="38" />
             </BTN>
         </BOX>
+        <PAD top="30" />
+        <BTN onclick="open('/assets/templates/nav.xml')" label="Next Page" color="lightblue" />
     </BOX>
 
 </FML>
