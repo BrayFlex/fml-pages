@@ -7,4 +7,4 @@ Example of using GitHub Pages as a backend for mobile FML applications. Using th
      
 [<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
      alt="Download it on the App Store"
-     height="40">](https://apps.apple.com/gb/app/flutter-markup-language/id1629916140)
+     height="42">](https://apps.apple.com/gb/app/flutter-markup-language/id1629916140)
