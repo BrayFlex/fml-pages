@@ -1,0 +1,17 @@
+<FML>
+  
+  <FILEPICKER id="fp1" allow=".jpg,.png">
+	  <GREYSCALE/>	
+  </FILEPICKER>
+
+  <CENTER>
+	  <TEXT size="12" label="GREYSCALE"/>
+	  <BOX expand="false" width="200" border="all" pad="10" radius="5">
+		  <IMAGE url="{fp1.data.file}"/>
+	  </BOX>
+	  <PAD top="5"/>
+	  <LINK onclick="fp1.start()">
+		  <ICON icon="add_a_photo" visible="=!{fp1.busy}"/>
+	  </LINK>		
+  </CENTER>
+<FML>
