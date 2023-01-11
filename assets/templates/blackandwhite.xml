@@ -14,4 +14,4 @@
 		  <ICON icon="add_a_photo" visible="=!{fp1.busy}"/>
 	  </LINK>		
   </CENTER>
-<FML>
+</FML>
