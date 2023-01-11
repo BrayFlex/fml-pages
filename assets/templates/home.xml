@@ -9,7 +9,7 @@
     <BOX width="100%" height="100%" center="true">
         <BOX width="300" height="110" layout="row" center="true" color="{THEME.primarycontainer}" elevation="2" shadowcolor="#11000000" shadowx="1" shadowy="1">
             <INPUT id="name" hint="Enter a name" color="{THEME.onprimary}" width="180" border="none" />
-            <BTN enabled="=!noe({name})" onclick="getage.start();name.set('')" radius="0" width="30">
+            <BTN enabled="=!noe({name})" onclick="getage.start();name.set('')" radius="0">
                 <ICON icon="send" color="{THEME.onprimary}" size="38" />
             </BTN>
         </BOX>
