@@ -3,7 +3,7 @@
         <APP_ICON               value="assets/images/logo.png"/>
         <APPLICATION_NAME       value="GitHub Pages Mobile App"/>
         <BRIGHTNESS             value="light"/>
-        <COLOR_SCHEME           value="bluegrey"/>
+        <COLOR_SCHEME           value="purple"/>
         <FONT                   value="Archivo Narrow"/>
         <HOME_PAGE              value="assets/templates/home.xml"/>
         <!-- <LOGIN_PAGE             value=""/> -->
