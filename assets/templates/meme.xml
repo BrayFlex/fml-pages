@@ -61,7 +61,7 @@
     </GET> -->
 
     <PAD top="30">
-        <BOX width="100%" height="100%" center="true" layout="={mobile} ? 'col' : 'row'" valign="start">
+        <BOX width="100%" height="100%" center="true" layout="={SYSTEM.useragent} != desktop ? 'col' : 'row'" valign="start">
             <BOX width="300" height="600" center="true" color="{THEME.primarycontainer}" elevation="2" shadowcolor="#11000000" shadowx="1" shadowy="1">
                 <BOX color="{THEME.onprimary}" expand="false">
                     <SELECT id="seltemp" width="260" border="none">
