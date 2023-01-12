@@ -1,6 +1,6 @@
 <FML>
     <CONFIG>
-        <APP_ICON               value="assets/images/logo.png"/>
+        <APP_ICON               value="assets/logo.png"/>
         <APPLICATION_NAME       value="GitHub Pages Mobile App"/>
         <BRIGHTNESS             value="light"/>
         <COLOR_SCHEME           value="purple"/>
