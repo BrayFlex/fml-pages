@@ -17,6 +17,9 @@
         <BTN onclick="open('/assets/templates/nav.xml')" label="Next Page" color="orange" type="outlined" />
         <PAD top="30" />
         <BTN onclick="open('/assets/templates/blackandwhite.xml')" label="B&amp;W Photo" color="orange" type="outlined" />
+        <PAD top="30" />
+        <BTN onclick="open('/assets/templates/meme.xml')" label="Meme Generator" color="orange" type="outlined" />
+        
     </BOX>
 
 </FML>
