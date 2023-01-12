@@ -1,0 +1,97 @@
+<!-- https://fml.appdaddy.co/#/assets/templates/tutorial/mobile-fml-app-using-github-pages-backend.xml -->
+<FML title="Tutorial: Build a Mobile FML App with only a Phone and a GitHub Account in 5 Minutes" linkable="true">
+
+    <VAR id="key" value="BRUZU-BtODtgVx3" />
+    
+    <VAR id="buttonsapi">
+        <VALUE>
+<![CDATA[https://img.bruzu.com/?bi=https://ucarecdn.com/3ceb7c0d-2921-466f-a002-77f248c99924//-/preview/-/quality/smart/
+&h=1408&w=600&a.tp=rect&a.x=478&a.y=889&a.w=189&a.h=27&a.c=white&a.bc=white&apiKey={key}
+&b.tp=textbox&b.x=150&b.y=140&b.w=185&b.h=36&b.c=black&b.a=348&b.t={text1}&b.fs=32&b.fw=400&b.ff=Inter&b.maxHeight=100&b.padding=20
+&c.tp=textbox&c.x=350&c.y=86&c.w=148&c.h=34&c.c=black&c.a=348&c.t={text2}&c.fs=30&c.fw=400&c.ff=Inter&c.maxHeight=105&c.padding=20
+&d.tp=textbox&d.x=300&d.y=796&d.w=516&d.h=68&d.c=white&d.t={text3}&d.fs=60&d.fw=700&d.ff=Inter&d.maxHeight=170&d.padding=20]]>
+        </VALUE>
+    </VAR>
+
+    <VAR id="clownapi">
+        <VALUE>
+<![CDATA[https://img.bruzu.com/?bi=https://ucarecdn.com/be032528-2cfd-4f1d-902b-f93d0c95fe42//-/preview/-/quality/smart/
+&h=1298&w=750&apiKey={key}
+&a.text={text1}&a.tp=textbox&a.x=221&a.y=105&a.w=365&a.h=33&a.c=black&a.fs=29&a.fw=400&a.ff=Inter&a.maxHeight=150&a.padding=20
+&b.text={text2}&b.tp=textbox&b.x=221&b.y=299&b.w=365&b.h=33&b.c=black&b.fs=29&b.fw=400&b.ff=Inter&b.maxHeight=150&b.padding=20
+&c.text={text3}&c.tp=textbox&c.x=221&c.y=524&c.w=365&c.h=33&c.c=black&c.fs=29&c.fw=400&c.ff=Inter&c.maxHeight=150&c.padding=20
+&d.text={text4}&d.tp=textbox&d.x=221&d.y=720&d.w=365&d.h=33&d.c=black&d.fs=29&d.fw=400&d.ff=Inter&d.maxHeight=150&d.padding=20]]>
+        </VALUE>
+    </VAR>
+
+    <VAR id="handshakeapi">
+        <VALUE>
+<![CDATA[https://img.bruzu.com/?a.src=https://ucarecdn.com/66138606-b93c-4c0f-813d-726897bff91f//-/preview/-/quality/smart/
+&h=1145&w=900&a.tp=image&a.x=449&a.y=325&a.w=900&a.h=645&apiKey={key}
+&b.tp=textbox&b.x=205&b.y=500&b.w=389&b.h=54&b.c=white&b.t={text1}&b.fs=48&b.fw=400&b.ff=Inter&b.maxHeight=300&b.padding=20
+&c.tp=textbox&c.x=692&c.y=500&c.w=389&c.h=54&c.c=white&c.t={text2}&c.fs=48&c.fw=400&c.ff=Inter&c.maxHeight=300&c.padding=20
+&d.tp=textbox&d.x=377&d.y=44&d.w=389&d.h=54&d.c=white&d.t={text3}&d.ta=center&d.fs=48&d.fw=400&d.ff=Inter&d.maxHeight=300&d.padding=20]]>
+        </VALUE>
+    </VAR>
+
+    <VAR id="offrampapi">
+        <VALUE>
+<![CDATA[https://img.bruzu.com/?bi=https://ucarecdn.com/7ec85933-d269-448c-aff8-55ef0af9d7fa//-/preview/-/quality/smart/
+&h=1247&w=804&apiKey={key}
+&a.tp=textbox&a.x=257&a.y=179&a.w=152&a.h=32&a.c=white&a.t={text1}&a.fs=28&a.lh=0.9&a.fw=400&a.ff=Inter&a.maxHeight=250&a.padding=20
+&b.tp=textbox&b.x=498&b.y=179&b.w=170&b.h=36&b.c=white&b.t={text2}&b.fs=32&b.fw=400&b.ff=Inter&b.maxHeight=250&b.padding=20
+&c.tp=textbox&c.x=449&c.y=634&c.w=402&c.h=61&c.c=white&c.a=351&c.t={text3}&c.fs=54&c.fw=700&c.ff=Inter&c.maxHeight=200&c.padding=20]]>
+        </VALUE>
+    </VAR>
+
+    
+    <VAR id="templateapi">
+        <VALUE>
+            <![CDATA[=case({seltemp}, 'buttons', {buttonsapi}, 'clown', {clownapi}, 'handshake', {handshakeapi}, 'offramp', {offrampapi}) ?? 'null']]>
+        </VALUE>
+    </VAR>
+
+    <!-- <GET id="getmeme" autoexecute="false" 
+    onsuccess=""
+    onfail="{getmeme.statuscode} == 429 ? toast('API Limit Exceeded') : toast('Something went wrong')">
+        <HEADER />
+        <URL>
+            <![CDATA[{templateapi}]]>
+        </URL>	
+    </GET> -->
+
+    <PAD top="30">
+        <BOX width="100%" height="100%" center="true" layout="={mobile} ? 'col' : 'row'" valign="start">
+            <BOX width="300" height="600" center="true" color="{THEME.primarycontainer}" elevation="2" shadowcolor="#11000000" shadowx="1" shadowy="1">
+                <BOX color="{THEME.onprimary}" expand="false">
+                    <SELECT id="seltemp" width="260" border="none">
+                        <OPTION value="" label="" />
+                        <OPTION value="buttons" label="Choose Button" />
+                        <OPTION value="clown" label="Clown Applying Makeup" />
+                        <OPTION value="handshake" label="Epic Handshake" />
+                        <OPTION value="offramp" label="Exit 12 Off Ramp" />
+                    </SELECT>
+                </BOX>
+                <PAD top="10" />
+                <INPUT id="text1" hint="Text 1" color="{THEME.onprimary}" width="260" border="none" lines="2" />
+                <PAD top="10" />
+                <INPUT id="text2" hint="Text 2" color="{THEME.onprimary}" width="260" border="none" lines="2" />
+                <PAD top="10" />
+                <INPUT id="text3" hint="Text 3" color="{THEME.onprimary}" width="260" border="none" lines="2" />
+                <PAD top="10" />
+                <INPUT id="text4" hint="Text 4" color="{THEME.onprimary}" width="260" border="none" lines="2" />
+                <PAD top="10" />
+                <BTN enabled="=!noe({seltemp})" type="outlined" onclick="" label="Download Meme" />
+            </BOX>
+            <PAD all="10" />
+            <COL height="600" width="300">
+                <IMAGE id="img" width="300" height="1000" fit="width">
+                    <URL>
+                        <![CDATA[{templateapi}]]>
+                    </URL>	
+                </IMAGE>
+            </COL>
+        </BOX>
+    </PAD>
+
+</FML>
