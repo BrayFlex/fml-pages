@@ -6,11 +6,6 @@
         <COLOR_SCHEME           value="purple"/>
         <FONT                   value="Archivo Narrow"/>
         <HOME_PAGE              value="assets/templates/home.xml"/>
-        <!-- <LOGIN_PAGE             value=""/> -->
-        <!-- <UNAUTHORIZED_PAGE      value=""/> -->
-        <!-- <MIRROR_API             value=""/> -->
         <REFRESH                value="true"/>
-        <!-- <FIREBASE_API_KEY       value=""/> -->
-        <!-- <FIREBASE_AUTH_DOMAIN   value=""/> -->
     </CONFIG>
 </FML>
