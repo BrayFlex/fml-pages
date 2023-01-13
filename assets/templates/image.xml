@@ -31,11 +31,11 @@
 
     <BOX height="100%" width="100%" center="true">
         <PAD all="20" visible="false">
-        <TEXT value="hasborder: {hasborder}" />
-        <TEXT value="bordercolor: {bordercolor}" />
-        <TEXT value="hasblur: {hasblur}" />
-        <TEXT value="hasshadow: {hasshadow}" />
-        <TEXT value="radius: {radius}" />
+            <TEXT value="hasborder: {hasborder}" />
+            <TEXT value="bordercolor: {bordercolor}" />
+            <TEXT value="hasblur: {hasblur}" />
+            <TEXT value="hasshadow: {hasshadow}" />
+            <TEXT value="radius: {radius}" />
         </PAD>
         <FILEPICKER id="fp1" allow=".jpg,.png" />
         <BUTTON onclick="fp1.start()">
