@@ -45,11 +45,11 @@
     
             <PAD top="20" />
             <TEXT value="**Border color**" />
-            <RADIO id="radiocolor" enabled="={hasborder}" size="30" value="#000000">
-                <OPTION value="#E61F1F" label="Red"/>
-                <OPTION value="#1818E1" label="Blue"/>
-                <OPTION value="#37A937" label="Green"/>
-                <OPTION value="#000000" label="Black"/>
+            <RADIO id="radiocolor" enabled="={hasborder}" size="30" value="black">
+                <OPTION value="redaccent" label="Red"/>
+                <OPTION value="blueaccent" label="Blue"/>
+                <OPTION value="greenaccent" label="Green"/>
+                <OPTION value="black" label="Black"/>
             </RADIO>
     
             <PAD top="20" />
