@@ -6,10 +6,12 @@
     <HEADER height="48" color="{THEME.onSecondary}">
         <POS top="12" left="5">
             <LINK onclick="back()">
-                <ICON icon="arrow_back_ios" color="{THEME.primary}" size="24" />
+                <BOX expand="false" width="60">
+                    <ICON icon="arrow_back_ios" color="{THEME.primary}" size="24" />
+                </BOX>
             </LINK>
         </POS>
-        <POS top="6" left="25">
+        <POS top="6" left="35">
             <TEXT style="h4" label="Image Upload" />
         </POS>
     
