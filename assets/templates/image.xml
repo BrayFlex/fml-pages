@@ -30,13 +30,6 @@
     </HEADER>
 
     <BOX height="100%" width="100%" center="true">
-        <PAD all="20" visible="false">
-            <TEXT value="hasborder: {hasborder}" />
-            <TEXT value="bordercolor: {bordercolor}" />
-            <TEXT value="hasblur: {hasblur}" />
-            <TEXT value="hasshadow: {hasshadow}" />
-            <TEXT value="radius: {radius}" />
-        </PAD>
         <FILEPICKER id="fp1" allow=".jpg,.png" />
         <BUTTON onclick="fp1.start()">
             <ICON icon="add_a_photo"/>
@@ -47,10 +40,17 @@
         <BOX height="200" width="200" layout="stack" center="true" visible="={fp1.data.file} != null"
         elevation="={hasshadow} ? 0.1 : 0" radius="={radius} * 2"
         border="={hasborder} ? 'all' : 'none'" bordercolor="{bordercolor}">
-            <IMAGE url="{fp1.data.file}" fit="fill" width="200" height="200" />
+            <IMAGE url="{fp1.data.file}" fit="cover" width="200" height="200" />
             <BOX color="={hasblur} ? 'blur' : 'transparent'" />
             <BUSY visible="{fp1.busy}" size="50" expand="false" color="red" />
         </BOX>
+        <PAD all="20" visible="false">
+            <TEXT value="hasborder: {hasborder}" />
+            <TEXT value="bordercolor: {bordercolor}" />
+            <TEXT value="hasblur: {hasblur}" />
+            <TEXT value="hasshadow: {hasshadow}" />
+            <TEXT value="radius: {radius}" />
+        </PAD>
     </BOX>
 
 </FML>
