@@ -44,10 +44,10 @@
             <TEXT style="h6" value="Choose an Image" />
         </BUTTON>	
         <PAD top="20"/>
-        <BOX height="200" width="200" layout="stack" center="true" radius="={radius} * 2"
-        elevation="={hasshadow} ? 0.1 : 0"
+        <BOX height="200" width="200" layout="stack" center="true" visible="={fp1.file.data} != null"
+        elevation="={hasshadow} ? 0.1 : 0" radius="={radius} * 2"
         border="={hasborder} ? 'all' : 'none'" bordercolor="{bordercolor}">
-            <IMAGE url="{fp1.data.file}" fit="fill" />
+            <IMAGE url="{fp1.data.file}" fit="cover" />
             <BUSY visible="{fp1.busy}" size="50" expand="false" color="red"/>
         </BOX>
     </BOX>
