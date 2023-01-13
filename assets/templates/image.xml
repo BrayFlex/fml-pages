@@ -44,7 +44,7 @@
             <TEXT style="h6" value="Choose an Image" />
         </BUTTON>	
         <PAD top="20"/>
-        <BOX height="200" width="200" layout="stack" center="true" visible="={fp1.file.data} != null"
+        <BOX height="200" width="200" layout="stack" center="true" visible="={fp1.data.file} != null"
         elevation="={hasshadow} ? 0.1 : 0" radius="={radius} * 2"
         border="={hasborder} ? 'all' : 'none'" bordercolor="{bordercolor}">
             <IMAGE url="{fp1.data.file}" fit="cover" />
