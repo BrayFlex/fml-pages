@@ -1,0 +1,46 @@
+<FML title="Image Upload Viewer" linkable="true" onstart="">
+
+    <VAR id="brightness" value="{THEME.brightness}" onchange="theme({brightness}, {selectedcolor})"/>
+    <VAR id="selectedcolor" value="{THEME.colorscheme}" onchange="theme({brightness}, {selectedcolor})" />
+
+    <HEADER height="48" color="{THEME.onSecondary}">
+        <POS top="12" left="5">
+            <LINK onclick="back()">
+                <ICON icon="arrow_back_ios" color="{THEME.primary}" size="24" />
+            </LINK>
+        </POS>
+        <POS top="6" left="25">
+            <TEXT style="h4" label="Image Upload" />
+        </POS>
+    
+        <POS top="0" right="30">
+            <POPOVER color="{THEME.primary}" icon="color_lens">
+                <ITEM label="Red" onclick="selectedcolor.set('red')"></ITEM>
+                <ITEM label="Blue" onclick="selectedcolor.set('blue')"></ITEM>
+                <ITEM label="Green" onclick="selectedcolor.set('green')"></ITEM>
+            </POPOVER>
+        </POS>
+        <POS top="12" right="5">
+            <LINK onclick="{THEME.brightness} == 'light' ? brightness.set('dark') : brightness.set('light')">
+                <ICON color="{THEME.primary}" size="24" icon="invert_colors" />
+            </LINK>
+        </POS>
+    </HEADER>
+
+    <BOX height="100%" width="100%" center="true">
+        <FILEPICKER id="fp1" allow=".jpg,.png" />
+        <BUTTON onclick="fp1.start()">
+            <ICON icon="add_a_photo"/>
+            <PAD left="8" />
+            <TEXT style="h6" value="Choose an Image" />
+        </BUTTON>	
+        <PAD top="20"/>
+        <BOX height="200" width="200" layout="stack" center="true" radius="={radius} * 2"
+        elevation="={hasshadow} ? 0.1 : 0"
+        border="={hasborder} ? 'all' : 'none'" bordercolor="{radiocolor}">
+            <IMAGE url="{fp1.data.file}"/>
+            <BUSY visible="{fp1.busy}" size="50" expand="false" color="red"/>
+        </BOX>
+    </BOX>
+
+</FML>
