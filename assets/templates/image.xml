@@ -47,7 +47,7 @@
         <BOX height="200" width="200" layout="stack" center="true" visible="={fp1.data.file} != null"
         elevation="={hasshadow} ? 0.1 : 0" radius="={radius} * 2"
         border="={hasborder} ? 'all' : 'none'" bordercolor="{bordercolor}">
-            <IMAGE url="{fp1.data.file}" fit="cover" />
+            <IMAGE url="{fp1.data.file}" fit="cover" width="200" height="200 />
             <BUSY visible="{fp1.busy}" size="50" expand="false" color="red"/>
         </BOX>
     </BOX>
