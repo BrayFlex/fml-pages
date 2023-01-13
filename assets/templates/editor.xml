@@ -1,0 +1,74 @@
+<FML title="Image Editor Settings" linkable="true" onstart="">
+
+    <VAR id="brightness" value="{THEME.brightness}" onchange="theme({brightness}, {selectedcolor})"/>
+    <VAR id="selectedcolor" value="{THEME.colorscheme}" onchange="theme({brightness}, {selectedcolor})" />
+
+    <HEADER height="48" color="{THEME.onSecondary}">
+        <POS top="6" left="25">
+            <TEXT style="h4" label="Image Settings" />
+        </POS>
+    
+        <POS top="0" right="30">
+            <POPOVER color="{THEME.primary}" icon="color_lens">
+                <ITEM label="Red" onclick="selectedcolor.set('red')"></ITEM>
+                <ITEM label="Blue" onclick="selectedcolor.set('blue')"></ITEM>
+                <ITEM label="Green" onclick="selectedcolor.set('green')"></ITEM>
+            </POPOVER>
+        </POS>
+        <POS top="12" right="5">
+            <LINK onclick="{THEME.brightness} == 'light' ? brightness.set('dark') : brightness.set('light')">
+                <ICON color="{THEME.primary}" size="24" icon="invert_colors" />
+            </LINK>
+        </POS>
+    </HEADER>
+
+    <!-- Preview --> 
+    <POS top="20">
+        <ROW halign="center" width="100%">
+            <PAD left="100">
+                <BOX width="100" height="100" layout="stack" center="true" radius="{radius}"
+                elevation="={hasshadow} ? 0.1 : 0"
+                border="={hasborder} ? 'all' : 'none'" bordercolor="{radiocolor}">
+                    <ICON icon="image_outlined" size="64" />
+                    <BOX width="100" height="100" color="={hasblur} ? 'blur' : 'transparent'" />
+                </BOX>
+            </PAD>
+        </ROW>
+    </POS>
+
+    <!-- Settings -->
+    <BOX height="100%" width="100%" center="true">
+        <BOX width="250">
+            <PAD top="20" />
+            <TEXT value="**Border?**" />
+            <SWITCH id="hasborder" value="false"/>
+    
+            <PAD top="20" />
+            <TEXT value="**Border color**" />
+            <RADIO id="radiocolor" enabled="={hasborder}" size="30" value="#000000">
+                <OPTION value="#E61F1F" label="Red"/>
+                <OPTION value="#1818E1" label="Blue"/>
+                <OPTION value="#37A937" label="Green"/>
+                <OPTION value="#000000" label="Black"/>
+            </RADIO>
+    
+            <PAD top="20" />
+            <TEXT value="**Image Transformations**" />
+            <VAR id="hasblur" value="=contains({checkboxinput}, 'blur')" />
+            <VAR id="hasshadow" value="=contains({checkboxinput}, 'shadow')" />
+            <CHECKBOX id="checkboxinput">
+                <OPTION value="blur" label="Blur"/>
+                <OPTION value="shadow" label="Shadow"/>
+            </CHECKBOX>
+
+            <PAD top="20" />
+            <TEXT value="**Image Radius**" />
+            <SLIDER id="radius" value="0" minimum="0" maximum="50" divisions="25" width="100%" />
+
+            <PAD top="20" />
+            <ROW halign="end">
+                <BUTTON label="Next Step" onclick="open('assets/templates/image.xml?')" />
+            </ROW>
+        </BOX>
+    </BOX>
+</FML>
