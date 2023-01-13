@@ -67,7 +67,7 @@
 
             <PAD top="20" />
             <ROW halign="end">
-                <BUTTON label="Next Step" onclick="open('assets/templates/image.xml?')" />
+                <BUTTON label="Next Step" onclick="open('assets/templates/image.xml?hasborder={hasborder}&amp;bordercolor={radiocolor}&amp;hasblur={hasblur}&amp;hasshadow={hasshadow}&amp;radius={radius}')" />
             </ROW>
         </BOX>
     </BOX>
