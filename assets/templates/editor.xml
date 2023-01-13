@@ -53,6 +53,10 @@
             </RADIO>
     
             <PAD top="20" />
+            <TEXT value="**Border Radius**" />
+            <SLIDER id="radius" value="0" minimum="0" maximum="50" divisions="25" width="100%" editable="={hasborder}" />
+    
+            <PAD top="20" />
             <TEXT value="**Image Transformations**" />
             <VAR id="hasblur" value="=contains({checkboxinput}, 'blur')" />
             <VAR id="hasshadow" value="=contains({checkboxinput}, 'shadow')" />
@@ -60,10 +64,6 @@
                 <OPTION value="blur" label="Blur"/>
                 <OPTION value="shadow" label="Shadow"/>
             </CHECKBOX>
-
-            <PAD top="20" />
-            <TEXT value="**Image Radius**" />
-            <SLIDER id="radius" value="0" minimum="0" maximum="50" divisions="25" width="100%" />
 
             <PAD top="20" />
             <ROW halign="end">
