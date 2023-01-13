@@ -4,7 +4,7 @@
     <VAR id="selectedcolor" value="{THEME.colorscheme}" onchange="theme({brightness}, {selectedcolor})" />
 
     <HEADER height="48" color="{THEME.onSecondary}">
-        <POS top="6" left="25">
+        <POS top="6" left="35">
             <TEXT style="h4" label="Image Settings" />
         </POS>
     
