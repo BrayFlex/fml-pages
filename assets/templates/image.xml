@@ -30,7 +30,7 @@
     </HEADER>
 
     <BOX height="100%" width="100%" center="true">
-        <PAD all="20">
+        <PAD all="20" visible="false">
         <TEXT value="hasborder: {hasborder}" />
         <TEXT value="bordercolor: {bordercolor}" />
         <TEXT value="hasblur: {hasblur}" />
